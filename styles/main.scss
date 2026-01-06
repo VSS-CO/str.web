@@ -1,0 +1,28 @@
+$primary-color: #4f46e5;
+$secondary-color: #6b7280;
+$body-bg: #f9fafb;
+$text-color: #111827;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $body-bg;
+  color: $text-color;
+}
+
+header {
+  background-color: $primary-color;
+  color: white;
+  padding: 1rem;
+}
+
+footer {
+  background-color: $secondary-color;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+main {
+  padding: 1rem;
+}
