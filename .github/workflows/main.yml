@@ -27,8 +27,7 @@ jobs:
 
       - name: Create Astro project
         run: |
-          npm create astro@latest . \
-            -- --template empty --typescript strict --yes
+          npm create astro@latest . -- --typescript strict --yes
 
       - name: Install dependencies
         run: npm install
