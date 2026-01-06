@@ -1,0 +1,31 @@
+{
+  "name": "strata-web",
+  "version": "1.0.0",
+  "description": "Frontend for Strata Extended - modular JS + SCSS + Tailwind + jQuery",
+  "type": "module",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack serve --mode development --open",
+    "watch": "webpack --watch"
+  },
+  "dependencies": {
+    "jquery": "^3.7.0",
+    "tailwindcss": "^3.3.3"
+  },
+  "devDependencies": {
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.0",
+    "sass": "^1.73.0",
+    "sass-loader": "^13.3.2",
+    "css-loader": "^6.9.1",
+    "style-loader": "^3.3.3",
+    "postcss": "^8.5.0",
+    "postcss-loader": "^7.3.3",
+    "autoprefixer": "^10.4.15",
+    "file-loader": "^6.2.0"
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}
