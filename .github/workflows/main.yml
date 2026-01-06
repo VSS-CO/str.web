@@ -1,0 +1,48 @@
+name: Init Astro
+
+on:
+  workflow_dispatch: # manual trigger only (recommended)
+
+jobs:
+  init:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Check if Astro already exists
+        run: |
+          if [ -f package.json ]; then
+            echo "Astro already initialized, skipping."
+            exit 0
+          fi
+
+      - name: Create Astro project
+        run: |
+          npm create astro@latest . \
+            -- --template empty --typescript strict --yes
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Add Starlight
+        run: npx astro add starlight --yes
+
+      - name: Add Tailwind
+        run: npx astro add tailwind --yes
+
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git commit -m "chore: initialize Astro with Starlight and Tailwind"
+          git push
