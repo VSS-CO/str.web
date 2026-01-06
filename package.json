@@ -1,31 +1,30 @@
 {
   "name": "strata-web",
   "version": "1.0.0",
-  "description": "Frontend for Strata Extended - modular JS + SCSS + Tailwind + jQuery",
-  "type": "module",
+  "description": "Strata frontend with modular JS, SCSS, Tailwind, and jQuery",
+  "author": "VSS.CO",
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack serve --mode development --open",
-    "watch": "webpack --watch"
+    "dev": "webpack serve --mode development --open"
   },
   "dependencies": {
-    "jquery": "^3.7.0",
-    "tailwindcss": "^3.3.3"
+    "jquery": "^4.1.1"
   },
   "devDependencies": {
-    "webpack": "^5.88.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.0",
-    "sass": "^1.73.0",
-    "sass-loader": "^13.3.2",
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "autoprefixer": "^11.4.14",
+    "babel-loader": "^9.1.4",
     "css-loader": "^6.9.1",
-    "style-loader": "^3.3.3",
-    "postcss": "^8.5.0",
+    "mini-css-extract-plugin": "^2.9.5",
+    "postcss": "^8.4.32",
     "postcss-loader": "^7.3.3",
-    "autoprefixer": "^10.4.15",
-    "file-loader": "^6.2.0"
+    "sass": "^1.66.1",
+    "sass-loader": "^13.3.2",
+    "tailwindcss": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   },
-  "browserslist": [
-    "defaults"
-  ]
+  "type": "module"
 }
