@@ -24,5 +24,5 @@ jobs:
 
     - name: Build
       run: |
-        npm install
+        npm install jquery && npm install --save-dev @babel/core @babel/preset-env autoprefixer babel-loader css-loader mini-css-extract-plugin postcss postcss-loader sass sass-loader tailwindcss webpack webpack-cli webpack-dev-server
         npx webpack
