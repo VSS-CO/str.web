@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strata</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: '#0e1116',
+            panel: '#151a21',
+            accent: '#5b8cff'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Inter, system-ui, sans-serif;
+    }
+    code, pre {
+      font-family: "JetBrains Mono", monospace;
+    }
+  </style>
+</head>
+
+<body class="bg-bg text-slate-200">
+
+  <!-- Navbar -->
+  <header class="border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <span class="font-semibold text-accent text-lg">Strata</span>
+      <nav class="space-x-6 text-sm">
+        <a href="#docs" class="hover:text-accent">Docs</a>
+        <a href="#roadmap" class="hover:text-accent">Roadmap</a>
+        <a href="https://github.com/YOURNAME/strata" class="hover:text-accent">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="max-w-6xl mx-auto px-6 py-20">
+    <h1 class="text-4xl font-semibold leading-tight">
+      A statically-typed scripting language<br>
+      that compiles down.
+    </h1>
+
+    <p class="mt-6 max-w-2xl text-slate-400">
+      Strata is designed for explicit syntax, predictable behavior,
+      and multi-target compilation.
+    </p>
+
+    <pre class="mt-10 bg-panel rounded-xl p-6 text-sm overflow-x-auto">
+fn add(a: int, b: int) -> int {
+  return a + b
+}
+    </pre>
+  </section>
+
+  <!-- Docs -->
+  <section id="docs" class="max-w-6xl mx-auto px-6 py-20">
+    <h2 class="text-2xl font-semibold mb-6">Documentation</h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-panel p-6 rounded-xl">
+        <h3 class="font-medium">Getting Started</h3>
+        <p class="text-sm text-slate-400 mt-2">
+          Installation, CLI usage, and first program.
+        </p>
+      </div>
+
+      <div class="bg-panel p-6 rounded-xl">
+        <h3 class="font-medium">Language Spec</h3>
+        <p class="text-sm text-slate-400 mt-2">
+          Types, functions, control flow, and design rules.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section id="roadmap" class="max-w-6xl mx-auto px-6 py-20">
+    <h2 class="text-2xl font-semibold mb-6">Roadmap</h2>
+
+    <ul class="space-y-3 text-slate-400">
+      <li>✔ Lexer & Parser</li>
+      <li>✔ Interpreter</li>
+      <li>◻ Optimizer</li>
+      <li>◻ WASM backend</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 py-6 text-sm text-slate-500">
+      © 2026 Strata Language
+    </div>
+  </footer>
+
+</body>
+</html>
